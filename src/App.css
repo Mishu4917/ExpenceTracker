@@ -1,0 +1,198 @@
+.app-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 20px;
+}
+
+/* Heading & Subtitle */
+.tracker-heading {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6a11cb, #2575fc, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+}
+.tracker-heading span {
+  font-size: 1.6rem;
+  display: block;
+  color: #333;
+  margin-top: 0.3rem;
+}
+.tracker-heading:hover {
+  transform: scale(1.05);
+}
+
+.tracker-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+.tracker-subtitle:hover {
+  color: #ff6b6b;
+}
+
+
+/* Table styling */
+.table-container {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+}
+.table thead {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: white;
+  font-weight: 700;
+  border-radius: 1rem 1rem 0 0;
+}
+.table tbody tr {
+  background: white;
+  border-radius: 0.8rem;
+  transition: all 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.03);
+}
+.table tbody tr:hover {
+  transform: scale(1.03);
+  background: #f0f7ff;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.12);
+}
+td, th {
+  padding: 1rem 1.2rem;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: none;
+}
+td:first-child, th:first-child { text-align: left; }
+
+/* Category badges */
+td.category {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+td.category:hover { transform: scale(1.1); opacity: 0.9; }
+
+td.category.utilities { background: #f0932b; }
+td.category.study { background: #6ab04c; }
+td.category.groceries { background: #22a6b3; }
+td.category.entertainment { background: #be2edd; }
+td.category.health { background: #eb4d4b; }
+td.category.transport { background: #30336b; }
+td.category.shopping { background: #5352ed; }
+td.category.food { background: #ff6b6b; }
+td.category.travel { background: #1dd1a1; }
+td.category.others { background: #576574; }
+
+/* Amount */
+td.amount { font-weight: 600; color: #333; }
+
+/* Delete Button */
+button.btn-outline-danger {
+  border-radius: 0.6rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  background: linear-gradient(45deg, #ff6b6b, #ff4757);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+button.btn-outline-danger:hover {
+  background: linear-gradient(45deg, #ff4757, #ff6b6b);
+  color: white;
+  box-shadow: 0px 6px 15px rgba(255,107,107,0.5);
+  transform: scale(1.1);
+}
+
+/* Total Row */
+.table tfoot tr {
+  background: linear-gradient(90deg, #74b9ff, #a29bfe);
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.08);
+}
+.table tfoot td { text-align: center; padding: 1rem; }
+
+/* Empty State */
+.text-muted {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #888 !important;
+  text-align: center;
+  margin-top: 1rem;
+}
+/* Funny total message */
+.funny-msg {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: blueviolet;
+  animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+/* Category badges hover */
+td.category {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+td.category:hover {
+  transform: rotate(-10deg) scale(1.2);
+  opacity: 0.9;
+}
+/* Funny total message */
+/* Set Your Limit Input */
+.limit-input {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 2px solid #6a11cb;
+  font-weight: 700;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #f8e1ff, #e3f2fd);
+  color: #2c3e50;
+  box-shadow: 0px 4px 10px rgba(106, 17, 203, 0.2);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.limit-input:focus {
+  border-color: #ff6b6b;
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+  color: #d63031;
+  box-shadow: 0px 6px 15px rgba(255, 107, 107, 0.5);
+  transform: scale(1.05);
+}
