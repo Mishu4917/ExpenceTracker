@@ -2,7 +2,7 @@
 import './App.css';
 import ExpenseList from './components/ExpenseList';
 import ExpenseForm from './components/ExpenseForm';
-import ExpenseFilter from './components/ExpenseFilter.JSX';
+import ExpenseFilter from './components/ExpenseFilter';
 
 
 function App() {
